@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "wb-parser-bot"
+version = "0.1.0"
+authors = []
+description = ""
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = "^3.13"
+wb-parser = {git = "https://github.com/Dugers/wb_parser_lib.git", extras = ["aiohttp"]}
+aiogram = "^3.20.0.post0"
+pydantic = "^2.11.4"
+pydantic-settings = "^2.9.1"
+rake-nltk = "^1.0.6"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+dev = 'main:run_dev'
+prod = 'main:run_prod'
